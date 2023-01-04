@@ -1,7 +1,9 @@
+// display current time
+ 
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-$(function () {
+// $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -14,30 +16,26 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-  //
+  
+  /*
+  if 
+   else
+   else if
+   */
+   
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
+   
+   
+   window.localStorage.setItem(' ', ' ');
+
   
-  const dateHeader =
-    new Date()
-      .toLocaleString("en-US", {
-        timeZone: "UTC",
-        hour12: false,
-        weekday: "short",
-        year: "numeric",
-        month: "short",
-        day: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-      })
-      .replace(/(?:(\d),)/, "$1") + " GMT";
+  // TODO: Add code to display the current date in the header of the page.
+  const currentDay = new Date();
+  console.log(currentDay);
+  
+  
 
-  console.log(dateHeader);
-
-});
-
-
+  
+  
