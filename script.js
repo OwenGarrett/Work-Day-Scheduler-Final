@@ -1,22 +1,20 @@
 // display current time and date 
 
-const currentDay = new Date();
-console.log(currentDay);
+const currentDay = dayjs().format('dddd, MMMM D');
+/* const currentDayTextEl = document.getElementById('currentDay');
 
-/*   I don't need the function showDate becuase the console logs the date with the variable currentDay. the below code is excessive, but it's cool to have 2 console logs I guess! 
-  
-function showDate(){
-    console.log(currentDay);
-  }
-  
-  showDate(''); 
-  */ 
+currentDayTextEl.innerText = currentDay; */
+
+
+
  
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-// $(function () {
+ $(function () {
+
+$("#currentDay").text(currentDay);
 
 // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -25,7 +23,7 @@ function showDate(){
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-document.addEventListener("click", saveText);
+document.addEventListener("click", saveText)
 console.log(this.saveText); 
   //
   // TODO: Add code to apply the past, present, or future class to each time
@@ -34,11 +32,13 @@ console.log(this.saveText);
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   
-  /*
-  if 
-   else
-   else if
-   */
+  if (time === past){
+    display = grey; 
+  } else if (time === future) {
+    display = green;
+  } else{
+    display = red;
+  }
    
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
@@ -57,17 +57,10 @@ console.log(this.saveText);
    
 
 
-  
+}
   
 
-/*   I don't need the function showDate becuase the console logs the date with the variable currentDay. the below code is excessive, but it's cool to have 2 console logs I guess! 
-  
-function showDate(){
-    console.log(currentDay);
-  }
-  
-  showDate(''); 
-  */ 
+
   
  
 
