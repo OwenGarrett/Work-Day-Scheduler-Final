@@ -1,15 +1,32 @@
-// display current time
+// display current time and date 
+
+const currentDay = new Date();
+console.log(currentDay);
+
+/*   I don't need the function showDate becuase the console logs the date with the variable currentDay. the below code is excessive, but it's cool to have 2 console logs I guess! 
+  
+function showDate(){
+    console.log(currentDay);
+  }
+  
+  showDate(''); 
+  */ 
  
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+
 // $(function () {
-  // TODO: Add a listener for click events on the save button. This code should
+
+// TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
+
+document.addEventListener("click", saveText);
+console.log(this.saveText); 
   //
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
@@ -28,14 +45,31 @@
   // attribute of each time-block be used to do this?
    
    
-   window.localStorage.setItem(' ', ' ');
+   $("#hour-09 .description").val(localStorage.getItem("hour-09"));
+   $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+   $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+   $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+   $("#hour-01 .description").val(localStorage.getItem("hour-01"));
+   $("#hour-02 .description").val(localStorage.getItem("hour-02"));
+   $("#hour-03 .description").val(localStorage.getItem("hour-03"));
+   $("#hour-04 .description").val(localStorage.getItem("hour-04"));
+   $("#hour-05 .description").val(localStorage.getItem("hour-05"));
+   
+
 
   
-  // TODO: Add code to display the current date in the header of the page.
-  const currentDay = new Date();
-  console.log(currentDay);
   
+
+/*   I don't need the function showDate becuase the console logs the date with the variable currentDay. the below code is excessive, but it's cool to have 2 console logs I guess! 
   
+function showDate(){
+    console.log(currentDay);
+  }
+  
+  showDate(''); 
+  */ 
+  
+ 
 
   
   
