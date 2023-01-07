@@ -4,7 +4,7 @@ const currentDay = dayjs().format('dddd, MMMM D');
 /* const currentDayTextEl = document.getElementById('currentDay');
 
 currentDayTextEl.innerText = currentDay; */
-$("#currentDay").text(currentDay);
+// $("#currentDay").text(currentDay);
 
 
  
@@ -14,7 +14,7 @@ $("#currentDay").text(currentDay);
 
  // $(function () {
 
-// $("#currentDay").text(currentDay);
+$("#currentDay").text(currentDay);
 
 // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
