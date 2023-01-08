@@ -21,18 +21,28 @@ currentDayTextEl.innerText = currentDay; */
 // console.log(saveBtn);
 
 
+/* 
+
 function display(){
   localStorage.setItem("userText", input.value)
   textInfo.innerHTML = localStorage.getItem("value")
 }
+*/
+
 
  $(function () {
 
 $("#currentDay").text(currentDay);
 
+});
 
+var response = localStorage.getItem("myResponse");
 
+saveBtn.addEventListener("click", function(){
+  localStorage.setItem("myResponse", response)
+})
 
+/*
 
 // TODO: Add a listener for click events on the save button. This code should
 // use the id in the containing time-block as a key to save the user input in
@@ -73,3 +83,5 @@ $("#hour-04 .description").val(localStorage.getItem("hour-04"));
 $("#hour-05 .description").val(localStorage.getItem("hour-05"));
 
  });
+
+ */
